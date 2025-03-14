@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Muhammad",
+  lastName: "Ali",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Full Stack Web Developer",
   avatar: "/images/avatar.jpg",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Urdu"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -17,8 +17,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and share thoughts on the
+      intersection of creativity and engineering.
     </>
   ),
 };
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Ali105111",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/muhammad-ali-iqbal-0bb504300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:muhammadaliiqbal105111@gmail.com",
   },
 ];
 
@@ -52,11 +52,12 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Full Stack Developer </>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Muhammad Ali, Passionate and results-driven{" "}
+      <InlineCode>Full Stack Web Developer</InlineCode> with a strong command of
+      <br /> front-end and back-end technologies.
     </>
   ),
 };
@@ -81,9 +82,14 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Passionate and results-driven Full Stack Web Developer with a strong
+        command of both front-end and back-end technologies. Adept at crafting
+        dynamic, responsive web applications that not only meet but exceed
+        client expectations. Skilled in leveraging modern frameworks and design
+        patterns to solve complex challenges, with a keen eye for detail and a
+        commitment to delivering high-quality solutions. Excels in collaborative
+        team environments as well as in independent projects, consistently
+        demonstrating a dedication to continuous learning and innovation.
       </>
     ),
   },
@@ -92,17 +98,15 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "PhoneBechPk.com",
+        // timeframe: "2025 - Present",
+        role: "Full Stack Development",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+           Developed the Phone Bech marketplace platform using Next.js and Supabase, creating an intuitive interface for users to post phone ads and for buyers to contact sellers efficiently.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented an AI model that verifies whether images posted in ads are actually of phones, enhancing platform reliability and user trust.
           </>,
         ],
         images: [
@@ -115,22 +119,28 @@ const about = {
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+      // {
+      //   company: "Creativ3",
+      //   timeframe: "2018 - 2022",
+      //   role: "Lead Designer",
+      //   achievements: [
+      //     <>
+      //       Developed a design system that unified the brand across multiple
+      //       platforms, improving design consistency by 40%.
+      //     </>,
+      //     <>
+      //       Led a cross-functional team to launch a new product line,
+      //       contributing to a 15% increase in overall company revenue.
+      //     </>,
+      //   ],
+      //   images: [   // optional: leave the array empty if you don't want to display images
+      //     {
+      //       src: "/images/projects/project-01/cover-01.jpg",
+      //       alt: "Once UI Project",
+      //       width: 16,
+      //       height: 9,
+      //     },],
+      // },
     ],
   },
   studies: {
@@ -138,50 +148,119 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+        name: "Shaheed Zulfikar Ali Bhutto Institute of Science and Technology",
+        description: <>bachelor's in computer science</>,
+      }
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
+      // Languages
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Java",
+        icon: "java",
+        description: "Proficient in Java programming language.",
+        category: "languages",
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Kotlin",
+        icon: "kotlin",
+        description: "Experienced in Kotlin for Android development.",
+        category: "languages",
+      },
+      {
+        title: "JavaScript",
+        icon: "javascript",
+        description: "Strong knowledge of JavaScript for web development.",
+        category: "languages",
+      },
+
+      // Frameworks/Libraries
+      {
+        title: "ReactJs",
+        icon: "react",
+        description: "Experienced in building user interfaces with React.",
+        category: "frameworks",
+      },
+      {
+        title: "NextJS",
+        icon: "nextjs",
+        description: "Building next-gen apps with Next.js.",
+        category: "frameworks",
+      },
+      {
+        title: "Spring Boot",
+        icon: "springboot",
+        description: "Proficient in building backend applications with Spring Boot.",
+        category: "frameworks",
+      },
+
+      // Web Development Tools
+      {
+        title: "Redux Toolkit",
+        icon: "redux",
+        description: "State management using Redux Toolkit.",
+        category: "web-tools",
+      },
+
+      // Databases
+      {
+        title: "MySQL",
+        icon: "mysql",
+        description: "Experienced in working with MySQL databases.",
+        category: "databases",
+      },
+      {
+        title: "PostgreSQL",
+        icon: "postgresql",
+        description: "Proficient in PostgreSQL for database management.",
+        category: "databases",
+      },
+      {
+        title: "Firebase",
+        icon: "firebase",
+        description: "Experienced in Firebase for real-time databases and authentication.",
+        category: "databases",
+      },
+
+      // Developer Tools
+      {
+        title: "VS Code",
+        icon: "vscode",
+        description: "Primary code editor for development.",
+        category: "dev-tools",
+      },
+      {
+        title: "IntelliJ IDEA",
+        icon: "intellij",
+        description: "Preferred IDE for Java and Kotlin development.",
+        category: "dev-tools",
+      },
+      {
+        title: "Eclipse",
+        icon: "eclipse",
+        description: "Experienced in using Eclipse for Java development.",
+        category: "dev-tools",
+      },
+      {
+        title: "Git",
+        icon: "git",
+        description: "Version control using Git.",
+        category: "dev-tools",
+      },
+      {
+        title: "GitHub",
+        icon: "github",
+        description: "Collaboration and code hosting on GitHub.",
+        category: "dev-tools",
+      },
+      {
+        title: "Android Studio",
+        icon: "androidstudio",
+        description: "Experienced in Android app development using Android Studio.",
+        category: "dev-tools",
       },
     ],
   },

@@ -116,9 +116,26 @@ export default function About() {
           >
             <Avatar src={person.avatar} size="xl" />
             <Flex gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
-            </Flex>
+  <Flex
+    vertical="center"
+    horizontal="center"
+    style={{
+      width: "24px",
+      height: "24px",
+      borderRadius: "50%",
+      overflow: "hidden",
+      background: "white",
+      border: "1px solid var(--color-neutral-medium)",
+    }}
+  >
+    <img
+      src="/images/pakistan-flag.png" // Path to Pakistan flag image
+      alt="Pakistan Flag"
+      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+    />
+  </Flex>
+  <Text>Pakistan</Text>
+</Flex>
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
                 {person.languages.map((language, index) => (
@@ -138,7 +155,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
+            {/* {about.calendar.display && (
               <Flex
                 fitWidth
                 border="brand-alpha-medium"
@@ -162,7 +179,7 @@ export default function About() {
                   icon="chevronRight"
                 />
               </Flex>
-            )}
+            )} */}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -291,54 +308,163 @@ export default function About() {
             </>
           )}
 
-          {about.technical.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
-                {about.technical.title}
-              </Heading>
-              <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
+{about.technical.display && (
+  <>
+    <Heading
+      as="h2"
+      id={about.technical.title}
+      variant="display-strong-s"
+      marginBottom="40"
+    >
+      {about.technical.title}
+    </Heading>
+
+    {/* Languages Section */}
+    <Heading as="h3" variant="display-strong-xs" marginBottom="20">
+      Languages
+    </Heading>
+    <Flex fillWidth gap="l" wrap marginBottom="40">
+      {about.technical.skills
+        .filter((skill) => skill.category === "languages")
+        .map((skill, index) => (
+          <Flex
+            key={`${skill.title}-${index}`}
+            border="neutral-medium"
+            radius="m"
+            padding="m"
+            gap="m"
+            vertical="center"
+            horizontal="center"
+            style={{ minWidth: "120px", textAlign: "center", flex: "1 1 30%" }}
+          >
+            <Icon name={skill.icon} size="xl" />
+            <Column gap="4">
+              <Text variant="heading-strong-s">{skill.title}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak">
+                {skill.description}
+              </Text>
+            </Column>
+          </Flex>
+        ))}
+    </Flex>
+
+    {/* Frameworks/Libraries Section */}
+    <Heading as="h3" variant="display-strong-xs" marginBottom="20">
+      Frameworks/Libraries
+    </Heading>
+    <Flex fillWidth gap="l" wrap marginBottom="40">
+      {about.technical.skills
+        .filter((skill) => skill.category === "frameworks")
+        .map((skill, index) => (
+          <Flex
+            key={`${skill.title}-${index}`}
+            border="neutral-medium"
+            radius="m"
+            padding="m"
+            gap="m"
+            vertical="center"
+            horizontal="center"
+            style={{ minWidth: "120px", textAlign: "center", flex: "1 1 30%" }}
+          >
+            <Icon name={skill.icon} size="xl" />
+            <Column gap="4">
+              <Text variant="heading-strong-s">{skill.title}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak">
+                {skill.description}
+              </Text>
+            </Column>
+          </Flex>
+        ))}
+    </Flex>
+
+    {/* Web Development Tools Section */}
+    <Heading as="h3" variant="display-strong-xs" marginBottom="20">
+      Web Development Tools
+    </Heading>
+    <Flex fillWidth gap="l" wrap marginBottom="40">
+      {about.technical.skills
+        .filter((skill) => skill.category === "web-tools")
+        .map((skill, index) => (
+          <Flex
+            key={`${skill.title}-${index}`}
+            border="neutral-medium"
+            radius="m"
+            padding="m"
+            gap="m"
+            vertical="center"
+            horizontal="center"
+            style={{ minWidth: "120px", textAlign: "center", flex: "1 1 30%" }}
+          >
+            <Icon name={skill.icon} size="xl" />
+            <Column gap="4">
+              <Text variant="heading-strong-s">{skill.title}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak">
+                {skill.description}
+              </Text>
+            </Column>
+          </Flex>
+        ))}
+    </Flex>
+
+    {/* Databases Section */}
+    <Heading as="h3" variant="display-strong-xs" marginBottom="20">
+      Databases
+    </Heading>
+    <Flex fillWidth gap="l" wrap marginBottom="40">
+      {about.technical.skills
+        .filter((skill) => skill.category === "databases")
+        .map((skill, index) => (
+          <Flex
+            key={`${skill.title}-${index}`}
+            border="neutral-medium"
+            radius="m"
+            padding="m"
+            gap="m"
+            vertical="center"
+            horizontal="center"
+            style={{ minWidth: "120px", textAlign: "center", flex: "1 1 30%" }}
+          >
+            <Icon name={skill.icon} size="xl" />
+            <Column gap="4">
+              <Text variant="heading-strong-s">{skill.title}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak">
+                {skill.description}
+              </Text>
+            </Column>
+          </Flex>
+        ))}
+    </Flex>
+
+    {/* Developer Tools Section */}
+    <Heading as="h3" variant="display-strong-xs" marginBottom="20">
+      Developer Tools
+    </Heading>
+    <Flex fillWidth gap="l" wrap marginBottom="40">
+      {about.technical.skills
+        .filter((skill) => skill.category === "dev-tools")
+        .map((skill, index) => (
+          <Flex
+            key={`${skill.title}-${index}`}
+            border="neutral-medium"
+            radius="m"
+            padding="m"
+            gap="m"
+            vertical="center"
+            horizontal="center"
+            style={{ minWidth: "120px", textAlign: "center", flex: "1 1 30%" }}
+          >
+            <Icon name={skill.icon} size="xl" />
+            <Column gap="4">
+              <Text variant="heading-strong-s">{skill.title}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak">
+                {skill.description}
+              </Text>
+            </Column>
+          </Flex>
+        ))}
+    </Flex>
+  </>
+)}
         </Column>
       </Flex>
     </Column>
