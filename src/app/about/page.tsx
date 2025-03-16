@@ -378,9 +378,9 @@ export default function About() {
     </Flex>
 
     {/* Web Development Tools Section */}
-    <Heading as="h3" variant="display-strong-xs" marginBottom="20">
+    {/* <Heading as="h3" variant="display-strong-xs" marginBottom="20">
       Web Development Tools
-    </Heading>
+    </Heading> */}
     <Flex fillWidth gap="l" wrap marginBottom="40">
       {about.technical.skills
         .filter((skill) => skill.category === "web-tools")

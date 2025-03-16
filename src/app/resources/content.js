@@ -165,12 +165,6 @@ const about = {
         category: "languages",
       },
       {
-        title: "Kotlin",
-        icon: "kotlin",
-        description: "Experienced in Kotlin for Android development.",
-        category: "languages",
-      },
-      {
         title: "JavaScript",
         icon: "javascript",
         description: "Strong knowledge of JavaScript for web development.",
@@ -196,14 +190,32 @@ const about = {
         description: "Proficient in building backend applications with Spring Boot.",
         category: "frameworks",
       },
+      {
+        title: "Express Js",
+        icon: "Express",
+        description: "Proficient in building backend applications with Express Js.",
+        category: "frameworks",
+      },
+      {
+        title: "  Node Js",
+        icon: "Node js",
+        description: "Proficient in building backend applications with Node js.",
+        category: "frameworks",
+      },
+      {
+        title: "Supabase",
+        icon: "Supabase",
+        description: "Proficient in building backend applications with Node js.",
+        category: "frameworks",
+      },
 
       // Web Development Tools
-      {
-        title: "Redux Toolkit",
-        icon: "redux",
-        description: "State management using Redux Toolkit.",
-        category: "web-tools",
-      },
+      // {
+      //   title: "Redux Toolkit",
+      //   icon: "redux",
+      //   description: "State management using Redux Toolkit.",
+      //   category: "web-tools",
+      // },
 
       // Databases
       {
@@ -219,8 +231,8 @@ const about = {
         category: "databases",
       },
       {
-        title: "Firebase",
-        icon: "firebase",
+        title: "Supabase",
+        icon: "Supabase",
         description: "Experienced in Firebase for real-time databases and authentication.",
         category: "databases",
       },
